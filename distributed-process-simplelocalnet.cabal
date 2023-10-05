@@ -28,19 +28,11 @@ Flag build-example
   Description: Build a simple example application
 
 Library
-<<<<<<< HEAD
   Build-Depends:     base, 
                      bytestring, 
                      network,  
                      network-multicast, 
                      data-accessor, 
-=======
-  Build-Depends:     base,
-                     bytestring,
-                     network,
-                     network-multicast,
-                     data-accessor,
->>>>>>> 40d881f5a267f0ce5b87ef7cd1fb4a5187aea88b
                      binary,
                      containers ,
                      transformers, 
