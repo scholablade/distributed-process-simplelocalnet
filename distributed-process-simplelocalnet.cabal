@@ -28,7 +28,7 @@ Flag build-example
   Description: Build a simple example application
 
 Library
-  Build-Depends:     base >= 4.4 && < 5,
+  Build-Depends:     base,
                      bytestring,
                      network,
                      network-multicast,
