@@ -146,7 +146,7 @@ import qualified Control.Distributed.Process.Node as Node
   )
 import qualified Network.Transport.TCP as NT
   ( createTransport
-  , defaultTCPParameters
+  , defaultTCPParameters, defaultTCPAddr
   )
 import qualified Network.Transport as NT (Transport)
 import qualified Network.Socket as N (HostName, ServiceName, SockAddr)
@@ -174,8 +174,7 @@ data BackendState = BackendState {
 -- | Initialize the backend
 initializeBackend :: N.HostName -> N.ServiceName -> RemoteTable -> IO Backend
 initializeBackend host port rtable = do
-  mTransport   <- NT.createTransport host port (\sn -> (host, sn))
-                                     NT.defaultTCPParameters
+  mTransport <- NT.createTransport (NT.defaultTCPAddr host port)  NT.defaultTCPParameters
   (recv, sendp) <- initMulticast  "224.0.0.99" 9999 1024
   (_, backendState) <- fixIO $ \ ~(tid, _) -> do
     backendState <- newMVar BackendState
