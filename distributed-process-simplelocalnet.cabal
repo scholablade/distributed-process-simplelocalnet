@@ -58,7 +58,7 @@ Executable TestSimpleLocalnet
                        network,
                        network-multicast,
                        data-accessor,
-                       binary ,
+                       binary,
                        containers,
                        transformers,
                        network-transport,
