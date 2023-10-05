@@ -36,8 +36,8 @@ Library
                      binary,
                      containers ,
                      transformers, 
-                     network-transport ,
-                     network-transport-tcp ,
+                     network-transport,
+                     network-transport-tcp,
                      distributed-process
   Exposed-modules:   Control.Distributed.Process.Backend.SimpleLocalnet,
                      Control.Distributed.Process.Backend.SimpleLocalnet.Internal.Multicast
